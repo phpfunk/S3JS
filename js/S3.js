@@ -51,7 +51,7 @@ barley.S3.upload = function(endpoint, options)
     var content_type          = options.content_type || '';
     var acl                   = options.acl || '';
     barley.S3.callback        = (options.callback === undefined || ! $.isFunction(options.callback)) ? function(){} : options.callback;
-    barley.S3.progress_object = (options.progress_id !== undefined) ? $('#' + progress_id) : {};
+    barley.S3.progress_object = (options.progress_id !== undefined) ? $('#' + options.progress_id) : {};
 
     // Reset progress bar & message
     barley.S3.progress_object.css('width', '10%').html('Starting...').slideDown('fast');
