@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <title>Upload from JS to S3</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/S3.js"></script>
+    <script type="text/javascript" src="js/example.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <style>
+    html {
+        background: no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding: 0;
+        margin: 10px;
+    }
+
+    body {
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    img {
+        border: 1px solid #ddd;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    h2 {
+        margin-bottom: 3px;
+    }
+
+    input {
+        font-size: 15px;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding: 0.5%;
+        width: 98%;
+    }
+
+    input:not(:focus) {
+        color: #777;
+    }
+
+    input:focus {
+        color: #000;
+    }
+
+    small { color: #777;}
+
+
+    #container {
+        margin: 0 auto;
+        background-color: #fff;
+        opacity: 0.8;
+        width: 500px;
+        padding: 15px;
+        text-align: left;
+    }
+    </style>
+</html>
+<body>
+    <div id="container">
+        <h2>Upload a new background image</h2>
+        <p>
+            <input id="file" type="file"><br>
+            <small>File cannot be larger than 10 MB</small>
+        </p>
+        <div id="progress-box" style="display:none;background-color:#444;color:#fff;border-top:2px solid #333;padding:10px;width:5%;margin-top: -5px; margin-bottom: 15px;font-size:13px;"></div>
+    </div>
+</body>
+</html>
